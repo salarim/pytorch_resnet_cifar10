@@ -127,9 +127,9 @@ class ResNet(nn.Module):
         x = self.get_embedding(x)
         x = self.classifier(x)
         
-        output = F.log_softmax(x, dim=1)
+        # output = F.log_softmax(x, dim=1)
 
-        return x, output
+        return x
 
     def get_embedding(self, x):
         x = self.conv1(x)
